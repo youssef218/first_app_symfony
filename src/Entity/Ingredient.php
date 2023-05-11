@@ -14,19 +14,24 @@ class Ingredient
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank()]
     #[Assert\Length( min: 2,max: 50)]
     private ?string $nom = null;
 
     #[ORM\Column]
-    #[Assert\NotNULL]
-    #[Assert\Positive]
+    #[Assert\NotNULL()]
+    #[Assert\Positive()]
     #[Assert\LessThan(200)]
     private ?float $prix = null;
 
     #[ORM\Column]
-    #[Assert\NotNULL]
+    #[Assert\NotNULL()]
     private ?\DateTimeImmutable $creatAt = null;
+
+    public function __construct()
+    {
+        $this->creatAt = new \DateTimeImmutable();
+    }
 
     public function getId(): ?int
     {
