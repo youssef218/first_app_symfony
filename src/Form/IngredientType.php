@@ -21,7 +21,8 @@ class IngredientType extends AbstractType
                 'attr' => [
                     'class' => 'form-control',
                     'minlength' => '2',
-                    'maxlength' => '50'
+                    'maxlength' => '50',
+                    'autocomplete'=> "off"
                 ],
                 'label' => 'Nom :',
                 'label_attr' => [
@@ -36,6 +37,7 @@ class IngredientType extends AbstractType
             ->add('prix', MoneyType::class, [
                 'attr' => [
                     'class' => 'form-control',
+                    'autocomplete'=> "off"
                 ],
                 'label' => 'Prix :',
                 'label_attr' => [
