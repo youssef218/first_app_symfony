@@ -27,12 +27,13 @@ class AppFixtures extends Fixture
                        ->setPrix(mt_rand(0,100)) ;
             $manager->persist($ingredient);
         }
-        // $ingredient = new Ingredient();
+     
+        $manager->flush();
+    }
+}
+   // $ingredient = new Ingredient();
         // $ingredient->setNom('Chocolate')
         //            ->setPrix(3.0) ;
         // $product = new Product();
         // $manager->persist($product);
-        $manager->persist($ingredient);
-        $manager->flush();
-    }
-}
+        // $manager->persist($ingredient);
