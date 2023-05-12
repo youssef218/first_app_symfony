@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="{{ path( 'home.index' )}}">Navbar</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,8 +15,26 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#"
+          <a class="nav-link active" href="{{ path( 'home.index') }}"
             >Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path( 'app_ingredient') }}"
+            >list 
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path( 'new_ingredient') }}"
+            >Aouter ingredient
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path( 'recette.index') }}"
+            >les recette
             <span class="visually-hidden">(current)</span>
           </a>
         </li>

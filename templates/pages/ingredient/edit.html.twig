@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %} {% block title %} hello {% endblock %} {% block
 body %}
 <div class="container mt-5">
-  <h1>Ajouter nouveau ingreadient</h1>
+  <h1>modifier sur ingredient </h1>
   {{ form_start(form) }}
   <div class="form-group">
     {{ form_label(form.nom) }}
@@ -18,7 +18,9 @@ body %}
       {{ form_errors(form.prix) }}
     </div>
   </div>
-
+    <div class="form-error">
+    {{ form_row(form.cost, { 'label': 'update ' }) }}
+    </div>
   {{ form_end(form) }}
 </div>
 
