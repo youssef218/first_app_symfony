@@ -207,7 +207,7 @@ class Recipe
     public function removeIngredient(Ingredient $ingredient): self
     {
         $this->ingredients->removeElement($ingredient);
-
+        
         return $this;
     }
 }

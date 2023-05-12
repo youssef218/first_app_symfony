@@ -17,7 +17,9 @@
 {% if not ingredients is same as([]) %}
 
     <h1>Mes ingrédients is <span>{{ pagination.getTotalItemCount }}</span></h1>
-
+    <a href="{{ path('new_ingredient') }}" class="btn btn-primary">
+				Créer un ingrédient
+			</a>
 
 <table class="table table-hover mt-5">
   <thead>
