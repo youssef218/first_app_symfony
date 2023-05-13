@@ -45,8 +45,10 @@ class RecipeType extends AbstractType
                 'attr' => [
                     'class' => 'form-control' ,
                     'min' => 1 ,
-                    'max'=>1440
+                    'max'=>1440 
+                    
                 ],
+                'required'=> false ,
                 'label_attr' => [
                     'class' => 'form-label mt-4'
 
@@ -63,6 +65,7 @@ class RecipeType extends AbstractType
                     'min' => 1 ,
                     'max'=>50
                 ],
+                'required'=> false,
                 'label_attr' => [
                     'class' => 'form-label mt-4'
 
@@ -79,6 +82,7 @@ class RecipeType extends AbstractType
                     'min' => 1 ,
                     'max'=>5
                 ],
+                'required'=> false,
                 'label_attr' => [
                     'class' => 'form-label mt-4'
 
@@ -107,6 +111,7 @@ class RecipeType extends AbstractType
                     'class' => 'form-control',
                     'autocomplete'=> "off"
                 ],
+                'required'=> false,
                 'label' => 'Prix :',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
@@ -122,6 +127,7 @@ class RecipeType extends AbstractType
                 'attr' => [
                     'class' => 'form-check-input m-5 ms-0'
                 ],
+                'required'=> false,
                 'label_attr' => [
                     'class' => 'form-check-label m-5 ms-0 '
                 ],

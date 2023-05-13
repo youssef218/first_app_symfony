@@ -102,6 +102,12 @@ class RecipeController extends AbstractController
     }
 
     #[Route('/recette/suppression/{id}', name: 'delete_recette', methods: ['GET'])]
+    /**
+     * delete a recette
+     * @param \App\Entity\Recipe $recipe
+     * @param \Doctrine\ORM\EntityManagerInterface $manager
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function deletet(Recipe $recipe, EntityManagerInterface $manager): Response
     {
         if (!$recipe) {
