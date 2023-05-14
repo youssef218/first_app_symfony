@@ -34,8 +34,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $email = null;
 
     #[ORM\Column]
-    private array $roles = [];
     #[Assert\NotNull()]
+    private array $roles = [];
+  
     private ?string $plainPassword = null;
     /**
      * @var string The hashed password
@@ -43,7 +44,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     #[Assert\NotBlank()]
 
-    private ?string $password = null;
+    private ?string $password = 'password';
 
 
     #[ORM\Column]

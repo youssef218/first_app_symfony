@@ -47,7 +47,7 @@ class RecipeController extends AbstractController
      * @return Response
      */
     #[Route('/recette/new', name: 'new.index' , methods:['GET' , 'POST'])]
-    public function edit(
+    public function new(
         Request $request ,
         EntityManagerInterface $manager
     ): Response
@@ -82,7 +82,7 @@ class RecipeController extends AbstractController
      * @param \Doctrine\ORM\EntityManagerInterface $manager
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function editt(Recipe $recipe, Request $request, EntityManagerInterface $manager): Response
+    public function edit(Recipe $recipe, Request $request, EntityManagerInterface $manager): Response
     {
         $form = $this->createForm(RecipeType::class , $recipe);
         $form->handleRequest($request);
